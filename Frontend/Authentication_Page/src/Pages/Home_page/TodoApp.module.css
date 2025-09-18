@@ -1,0 +1,204 @@
+.HomeDiv{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    border:2px solid white;
+}
+
+.TodoApp{
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+    width: 60%;
+}
+
+.title{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.name{
+    font-size: 2rem;
+}
+
+.taskDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0rem;
+    gap: 0.5rem;
+}
+
+.new_task, .editTxt{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+.addBtn{
+    height: 100%;
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    border: none;
+}
+
+.task{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    gap: 0.5rem;
+    border: 2px solid white;
+}
+
+.old_task{
+    word-break: break-word;
+}
+
+.taskBtn{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.completedBtn, .editBtn, .deleteBtn, .saveBtn, .logOutBtn{
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: none;
+}
+
+.editBtn{
+    background-color: lightslategray;
+}
+
+.deleteBtn{
+    background-color: red;
+}
+
+.saveBtn{
+    background-color: green;
+}
+
+.logOutBtn{
+    margin-bottom: 0.5rem;
+    background-color: rgb(138, 24, 24);
+}
+
+/* ---------------------------------------------- */
+@media screen and (max-width: 600px){
+    .HomeDiv{
+        padding: 1.2rem;
+    }
+
+    .TodoApp{
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+
+    .name{
+        font-size: 1.3rem;
+    }
+    
+    .taskDiv{
+        gap: 0.3rem;
+    }
+
+    .new_task, .editTxt{
+        font-size: 1rem;
+    }
+
+    .addBtn{
+        padding: 0.5rem 1rem;
+    }
+
+    .task{
+        flex-direction: column;
+        font-size: 1rem;
+        padding: 0.5rem;
+        gap: 1rem;
+        border: 2px solid white;
+    }
+
+    .taskBtn{
+        width: 100%;
+        justify-content: space-evenly;
+        /* border: 2px solid white; */
+    }
+
+    .completedBtn, .editBtn, .deleteBtn, .saveBtn, .logOutBtn{
+        font-size: 1rem;
+        padding: 0.3rem 0.7rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .HomeDiv{
+        padding: 1.2rem;
+    }
+
+    .TodoApp{
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .title{
+        font-size: 2.5rem;
+    }
+
+    .name{
+        font-size: 1.5rem;
+    }
+    
+    .taskDiv{
+        gap: 0.4rem;
+    }
+
+    .addBtn{
+        padding: 0.5rem 1rem;
+    }
+
+    .task{
+        flex-direction: column;
+        padding: 0.5rem;
+        gap: 1rem;
+        border: 2px solid white;
+    }
+
+    .taskBtn{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .completedBtn, .editBtn, .deleteBtn, .saveBtn, .logOutBtn{
+        padding: 0.3rem 0.7rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .TodoApp{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .TodoApp{
+        width: 80%;
+    }
+
+}
