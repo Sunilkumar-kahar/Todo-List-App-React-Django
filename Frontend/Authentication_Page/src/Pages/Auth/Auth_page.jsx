@@ -16,6 +16,7 @@ function Auth_page(){
     const [password, setPassword] = useState('');
     const [verify_pass, setVerify_pass] = useState('');
     const [isSignIn, setSignIn] = useState(true);
+    const [loadingNotice, setLoadingNotice] = useState(true);
 
     const navigate = useNavigate();
 
@@ -172,8 +173,21 @@ function Auth_page(){
         }
     }
 
+    useEffect(()=>{
+        setTimeout(()=>{
+            setLoadingNotice(false);
+        }, 40000);
+    }, []);
+
     return(
         <div className={style.AuthDiv}>
+            { loadingNotice &&
+                <div className={style.loadingDiv}>
+                    <p className={style.loadingPara}>
+                        Notice: Due to the free hosting plan, the app may take a minute to start up on the first load. Please be patient as it wakes up.
+                    </p>
+                </div>
+            }
             <form onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
                 <h1 className={style.title}>{isSignIn ? "Sign In" : "Sign Up"}</h1>
                 <hr />
