@@ -32,7 +32,7 @@ venv/
 Thumbs.db
 
 # Django specific (if applicable)
-*.sqlite3
+#*.sqlite3
 /staticfiles/
 /media/
 
